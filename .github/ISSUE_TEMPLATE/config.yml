@@ -1,0 +1,8 @@
+blank_issues_enabled: true
+contact_links:
+  - name: General Questions
+    url: https://github.com/sachinthau/skills-expand-your-team-with-copilot/discussions
+    about: For general questions, please use GitHub Discussions
+  - name: Emergency Contact
+    url: mailto:support@mergington.edu
+    about: For urgent issues requiring immediate attention, contact school IT support

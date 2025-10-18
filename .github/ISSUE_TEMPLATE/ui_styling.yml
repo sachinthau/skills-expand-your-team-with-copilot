@@ -1,0 +1,147 @@
+name: UI/Styling Enhancement
+description: Request changes to the visual design, layout, or styling of the website
+title: "[UI]: "
+labels: ["enhancement", "design"]
+assignees: []
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for helping improve the look and feel of our website! Please provide detailed information about your styling request.
+
+  - type: textarea
+    id: styling-request
+    attributes:
+      label: Styling Request
+      description: What visual or styling change would you like to see?
+      placeholder: Example - Add dark mode toggle to allow users to switch between light and dark themes
+    validations:
+      required: true
+
+  - type: dropdown
+    id: ui-area
+    attributes:
+      label: Which part of the UI needs changes?
+      description: Select the area that needs styling updates
+      options:
+        - Overall theme/color scheme
+        - Header/Navigation
+        - Activity cards
+        - Filters/Search area
+        - Buttons and forms
+        - Typography/Fonts
+        - Spacing and layout
+        - Animations/Transitions
+        - Icons and graphics
+        - Mobile responsiveness
+        - Other (please describe below)
+    validations:
+      required: true
+
+  - type: textarea
+    id: current-state
+    attributes:
+      label: Current State
+      description: Describe what it looks like now
+      placeholder: Example - The website only has a light theme with white background
+    validations:
+      required: true
+
+  - type: textarea
+    id: desired-state
+    attributes:
+      label: Desired State
+      description: Describe how you want it to look
+      placeholder: |
+        Example:
+        - Add a toggle button in the top right corner
+        - Dark mode should have dark background (#1a1a1a) with light text
+        - Should preserve all readability and functionality
+    validations:
+      required: true
+
+  - type: textarea
+    id: color-specifications
+    attributes:
+      label: Color Specifications (if applicable)
+      description: Specify exact colors if you have requirements
+      placeholder: |
+        Example:
+        - Primary color: #00ff00 (lime green)
+        - Secondary color: #ffffff (white)
+        - Background: #f5f5f5
+        - Text: #333333
+    validations:
+      required: false
+
+  - type: textarea
+    id: acceptance-criteria
+    attributes:
+      label: Acceptance Criteria
+      description: What needs to be true for this styling change to be considered complete?
+      placeholder: |
+        - [ ] New colors/styles are applied consistently across all pages
+        - [ ] Text remains readable with sufficient contrast
+        - [ ] Layout is responsive and works on mobile devices
+        - [ ] No existing functionality is broken
+        - [ ] Changes match the school's brand guidelines
+    validations:
+      required: true
+
+  - type: textarea
+    id: brand-guidelines
+    attributes:
+      label: Brand Guidelines or References
+      description: Any brand guidelines, style guides, or reference images?
+      placeholder: |
+        Example:
+        - School colors: White (#ffffff) and Lime Green (#32CD32)
+        - Reference website: https://example.com
+        - Mascot images from: https://octodex.github.com/
+    validations:
+      required: false
+
+  - type: dropdown
+    id: urgency
+    attributes:
+      label: Urgency Level
+      description: How soon is this styling change needed?
+      options:
+        - High - Needed for upcoming event
+        - Medium - Important for general use
+        - Low - Aesthetic improvement
+    validations:
+      required: true
+
+  - type: textarea
+    id: technical-considerations
+    attributes:
+      label: Technical Considerations (Optional)
+      description: Any technical constraints or suggestions?
+      placeholder: |
+        Example:
+        - Should work in all modern browsers
+        - Must be accessible (WCAG 2.1 Level AA)
+        - Use CSS variables for easy theme switching
+    validations:
+      required: false
+
+  - type: textarea
+    id: additional-context
+    attributes:
+      label: Additional Context
+      description: Screenshots, mockups, or examples from other websites
+      placeholder: Add any visual references, screenshots, or examples here
+    validations:
+      required: false
+
+  - type: checkboxes
+    id: terms
+    attributes:
+      label: Confirmation
+      description: Please confirm the following
+      options:
+        - label: I have checked that this styling change hasn't already been requested
+          required: true
+        - label: This change aligns with school branding and guidelines
+          required: true

@@ -1,0 +1,128 @@
+name: Feature Request
+description: Request a new feature or enhancement for the activities website
+title: "[Feature]: "
+labels: ["enhancement"]
+assignees: []
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for suggesting a new feature! Please provide detailed information so we can understand and implement your idea.
+
+  - type: textarea
+    id: feature-description
+    attributes:
+      label: Feature Description
+      description: What feature would you like to see added?
+      placeholder: Example - Add a calendar view to see all activities across the week with their times
+    validations:
+      required: true
+
+  - type: textarea
+    id: problem-statement
+    attributes:
+      label: Problem or Need
+      description: What problem would this feature solve? Why is it needed?
+      placeholder: |
+        Example - Students and teachers find it difficult to see schedule conflicts and time overlaps with the current card view. A calendar view would make it easier to visualize weekly schedules.
+    validations:
+      required: true
+
+  - type: dropdown
+    id: feature-category
+    attributes:
+      label: Feature Category
+      description: What type of feature is this?
+      options:
+        - New View/Display Option
+        - Filter/Search Enhancement
+        - Registration/Enrollment Feature
+        - Activity Management
+        - User Interface Improvement
+        - Performance Enhancement
+        - Accessibility Improvement
+        - Other (please describe below)
+    validations:
+      required: true
+
+  - type: textarea
+    id: proposed-solution
+    attributes:
+      label: Proposed Solution
+      description: How would you like this to work? Describe the feature in detail.
+      placeholder: |
+        Example:
+        - Add a toggle button in the top bar to switch between card view and calendar view
+        - Calendar shows Sunday-Saturday across the top, times down the side
+        - Activities appear as blocks at their scheduled times
+        - Multiple activities at the same time appear side by side
+    validations:
+      required: true
+
+  - type: textarea
+    id: acceptance-criteria
+    attributes:
+      label: Acceptance Criteria
+      description: How will we know this feature is complete and working correctly?
+      placeholder: |
+        - [ ] Toggle button is visible in the navigation bar
+        - [ ] Calendar view displays all 7 days of the week
+        - [ ] Activities appear at their correct time slots
+        - [ ] Users can switch between card and calendar view seamlessly
+        - [ ] All existing functionality continues to work
+    validations:
+      required: true
+
+  - type: textarea
+    id: user-benefit
+    attributes:
+      label: User Benefit
+      description: Who will benefit from this feature and how?
+      placeholder: Example - Students will be able to quickly identify scheduling conflicts. Teachers will have a clearer overview of the weekly activity schedule.
+    validations:
+      required: true
+
+  - type: textarea
+    id: technical-hints
+    attributes:
+      label: Implementation Hints (Optional)
+      description: Any technical suggestions or considerations for implementing this feature?
+      placeholder: |
+        Example:
+        - Could use a JavaScript calendar library
+        - May need to update the API to return time ranges in a specific format
+        - Should be responsive for mobile devices
+    validations:
+      required: false
+
+  - type: dropdown
+    id: priority
+    attributes:
+      label: Priority Level
+      description: How important is this feature?
+      options:
+        - High - Critical for daily operations
+        - Medium - Important but not urgent
+        - Low - Nice to have when time permits
+    validations:
+      required: true
+
+  - type: textarea
+    id: additional-context
+    attributes:
+      label: Additional Context
+      description: Any other information, mockups, screenshots, or examples from other websites?
+      placeholder: Add any relevant links, images, or additional details here
+    validations:
+      required: false
+
+  - type: checkboxes
+    id: terms
+    attributes:
+      label: Confirmation
+      description: Please confirm the following
+      options:
+        - label: I have checked that this feature hasn't already been requested
+          required: true
+        - label: This feature aligns with the purpose of the activities website
+          required: true
