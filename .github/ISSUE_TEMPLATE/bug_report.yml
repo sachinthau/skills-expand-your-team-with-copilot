@@ -1,0 +1,97 @@
+name: Bug Report
+description: Report a bug or issue with the Mergington High School Activities website
+title: "[Bug]: "
+labels: ["bug"]
+assignees: []
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for taking the time to report a bug! Please provide detailed information to help us understand and fix the issue.
+
+  - type: textarea
+    id: problem-description
+    attributes:
+      label: Problem Description
+      description: What is the bug or issue you're experiencing?
+      placeholder: Example - The website displays blue colors instead of our school colors (white and lime green)
+    validations:
+      required: true
+
+  - type: textarea
+    id: current-behavior
+    attributes:
+      label: Current Behavior
+      description: What is currently happening?
+      placeholder: Describe what you see now
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected-behavior
+    attributes:
+      label: Expected Behavior
+      description: What should be happening instead?
+      placeholder: Describe what you expect to see
+    validations:
+      required: true
+
+  - type: dropdown
+    id: bug-location
+    attributes:
+      label: Where is the issue occurring?
+      description: Select the area where you're seeing the bug
+      options:
+        - Homepage/Activity List
+        - Activity Registration
+        - Search/Filter functionality
+        - Login/Authentication
+        - Activity Details Display
+        - Visual/Styling issue
+        - Other (please describe below)
+    validations:
+      required: true
+
+  - type: textarea
+    id: steps-to-reproduce
+    attributes:
+      label: Steps to Reproduce
+      description: How can we reproduce this issue?
+      placeholder: |
+        1. Go to the homepage
+        2. Click on 'Soccer Club'
+        3. Notice the incorrect color scheme
+    validations:
+      required: false
+
+  - type: textarea
+    id: acceptance-criteria
+    attributes:
+      label: Acceptance Criteria
+      description: What needs to be true for this bug to be considered fixed?
+      placeholder: |
+        - [ ] School colors (white and lime green) are used throughout the website
+        - [ ] Blue colors are replaced appropriately
+        - [ ] All existing functionality still works
+    validations:
+      required: true
+
+  - type: textarea
+    id: additional-context
+    attributes:
+      label: Additional Context
+      description: Any other information that might be helpful (screenshots, error messages, links to examples, etc.)
+      placeholder: Add any screenshots, error messages, or related information here
+    validations:
+      required: false
+
+  - type: checkboxes
+    id: terms
+    attributes:
+      label: Confirmation
+      description: Please confirm the following
+      options:
+        - label: I have checked that this issue hasn't already been reported
+          required: true
+        - label: This issue is specific to the Mergington High School Activities website
+          required: true

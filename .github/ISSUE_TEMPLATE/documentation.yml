@@ -1,0 +1,152 @@
+name: Documentation Update
+description: Request updates to documentation, README files, or other written content
+title: "[Docs]: "
+labels: ["documentation"]
+assignees: []
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for helping keep our documentation up to date! Clear documentation helps everyone understand how to use and maintain the website.
+
+  - type: textarea
+    id: documentation-issue
+    attributes:
+      label: Documentation Issue
+      description: What documentation needs to be updated or created?
+      placeholder: Example - The README file in the src folder is outdated and doesn't reflect the current features
+    validations:
+      required: true
+
+  - type: dropdown
+    id: doc-type
+    attributes:
+      label: Type of Documentation
+      description: What kind of documentation is this?
+      options:
+        - README file update
+        - Setup/Installation instructions
+        - User guide/How-to
+        - Feature documentation
+        - API documentation
+        - Code comments
+        - Development guide
+        - Troubleshooting guide
+        - Other (please describe below)
+    validations:
+      required: true
+
+  - type: dropdown
+    id: doc-location
+    attributes:
+      label: Documentation Location
+      description: Where is this documentation located?
+      options:
+        - Main README.md (root)
+        - src/README.md
+        - docs/ folder
+        - Code comments (please specify file)
+        - New documentation file needed
+        - Other (please specify below)
+    validations:
+      required: true
+
+  - type: textarea
+    id: current-content
+    attributes:
+      label: Current Content Issues
+      description: What's wrong with the current documentation?
+      placeholder: |
+        Example:
+        - README lists only 2 features but website now has 5+ features
+        - Setup instructions don't mention the new authentication system
+        - Missing information about the filter functionality
+    validations:
+      required: true
+
+  - type: textarea
+    id: desired-content
+    attributes:
+      label: Desired Content
+      description: What should the documentation include or say instead?
+      placeholder: |
+        Example - The README should be updated to include:
+        - All current features (activity viewing, filtering, registration, authentication)
+        - Description of the filter options (category, day, time)
+        - Information about teacher login functionality
+        - Updated development instructions
+    validations:
+      required: true
+
+  - type: textarea
+    id: acceptance-criteria
+    attributes:
+      label: Acceptance Criteria
+      description: What needs to be true for this documentation update to be complete?
+      placeholder: |
+        - [ ] All current features are accurately documented
+        - [ ] Setup instructions are clear and complete
+        - [ ] Examples are provided where helpful
+        - [ ] Information is organized logically
+        - [ ] Links are working and up to date
+        - [ ] Grammar and spelling are correct
+    validations:
+      required: true
+
+  - type: textarea
+    id: scope
+    attributes:
+      label: Scope of Changes
+      description: Which specific sections or files need to be updated?
+      placeholder: |
+        Example:
+        - src/README.md - Features section
+        - src/README.md - Development Guide section
+        - docs/how-to-develop.md - Add authentication setup
+    validations:
+      required: false
+
+  - type: dropdown
+    id: priority
+    attributes:
+      label: Priority Level
+      description: How important is this documentation update?
+      options:
+        - High - Blocking current users
+        - Medium - Needed for clarity
+        - Low - General improvement
+    validations:
+      required: true
+
+  - type: textarea
+    id: related-code
+    attributes:
+      label: Related Code or Features
+      description: What code or features does this documentation cover?
+      placeholder: |
+        Example:
+        - Authentication system (login/logout functionality)
+        - Activity filtering (category, day, time filters)
+        - Registration system
+    validations:
+      required: false
+
+  - type: textarea
+    id: additional-context
+    attributes:
+      label: Additional Context
+      description: Any other information, links to related issues, or specific requirements
+      placeholder: Add any relevant links, screenshots of outdated content, or related information here
+    validations:
+      required: false
+
+  - type: checkboxes
+    id: terms
+    attributes:
+      label: Confirmation
+      description: Please confirm the following
+      options:
+        - label: I have reviewed the current documentation
+          required: true
+        - label: The proposed changes are accurate and helpful
+          required: true

@@ -1,0 +1,177 @@
+name: Activity Management Request
+description: Request to add, modify, or remove activities from the system
+title: "[Activity]: "
+labels: ["activity", "data"]
+assignees: []
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Use this template to request changes to activities (adding new ones, modifying existing ones, or removing activities).
+
+  - type: dropdown
+    id: request-type
+    attributes:
+      label: Request Type
+      description: What type of activity change do you need?
+      options:
+        - Add new activity
+        - Modify existing activity
+        - Remove activity
+        - Bulk update (multiple activities)
+    validations:
+      required: true
+
+  - type: textarea
+    id: activity-name
+    attributes:
+      label: Activity Name
+      description: Name of the activity (or activities if multiple)
+      placeholder: Example - Robotics Club
+    validations:
+      required: true
+
+  - type: textarea
+    id: activity-details
+    attributes:
+      label: Activity Details
+      description: Provide complete details about the activity
+      placeholder: |
+        Example:
+        - Description: Learn programming and build robots for competitions
+        - Category: Technology
+        - Days: Tuesday, Thursday
+        - Time: 3:00 PM - 5:00 PM (15:00 - 17:00 in 24h format)
+        - Maximum participants: 20
+        - Difficulty level (if applicable): Beginner
+    validations:
+      required: true
+
+  - type: input
+    id: activity-category
+    attributes:
+      label: Category
+      description: What category does this activity belong to?
+      placeholder: Sports, Arts, Academic, Community, or Technology
+    validations:
+      required: true
+
+  - type: textarea
+    id: schedule-information
+    attributes:
+      label: Schedule Information
+      description: When does this activity meet?
+      placeholder: |
+        Days: Monday, Wednesday, Friday
+        Time: 3:30 PM - 5:00 PM
+        (Please use 24-hour format for backend: 15:30 - 17:00)
+    validations:
+      required: true
+
+  - type: input
+    id: max-participants
+    attributes:
+      label: Maximum Participants
+      description: What is the capacity for this activity?
+      placeholder: "20"
+    validations:
+      required: true
+
+  - type: textarea
+    id: current-state
+    attributes:
+      label: Current State (for modifications/removals)
+      description: If modifying or removing, what is the current state?
+      placeholder: |
+        Example - Currently the Chess Club meets on Mondays only, but we need to add a Wednesday session as well
+    validations:
+      required: false
+
+  - type: textarea
+    id: reason
+    attributes:
+      label: Reason for Change
+      description: Why is this change needed?
+      placeholder: |
+        Example:
+        - New activity starting this semester
+        - Schedule conflict resolution
+        - Increased student interest requiring more capacity
+        - Activity no longer offered
+    validations:
+      required: true
+
+  - type: textarea
+    id: acceptance-criteria
+    attributes:
+      label: Acceptance Criteria
+      description: How will we know this change is complete?
+      placeholder: |
+        - [ ] Activity appears in the activities list
+        - [ ] All details are correct (name, description, schedule, capacity)
+        - [ ] Activity is categorized correctly and shows up in filters
+        - [ ] Registration works properly for the activity
+        - [ ] Schedule conflicts are avoided
+    validations:
+      required: true
+
+  - type: dropdown
+    id: effective-date
+    attributes:
+      label: When should this take effect?
+      description: Select the timing for this change
+      options:
+        - Immediately
+        - Next week
+        - Next month
+        - Specific date (mention in additional context)
+    validations:
+      required: true
+
+  - type: textarea
+    id: impact-assessment
+    attributes:
+      label: Impact Assessment
+      description: Who will be affected by this change?
+      placeholder: |
+        Example:
+        - 15 students currently enrolled need to be notified
+        - Conflicts with existing Tuesday activities
+        - Teacher Ms. Johnson will be the supervisor
+    validations:
+      required: false
+
+  - type: textarea
+    id: technical-considerations
+    attributes:
+      label: Technical Considerations (Optional)
+      description: Any data migration or technical considerations?
+      placeholder: |
+        Example:
+        - Current participants should be preserved
+        - Need to merge with existing similar activity
+        - Requires backend data update
+    validations:
+      required: false
+
+  - type: textarea
+    id: additional-context
+    attributes:
+      label: Additional Context
+      description: Any other relevant information
+      placeholder: Add any relevant details, related activities, or special requirements
+    validations:
+      required: false
+
+  - type: checkboxes
+    id: terms
+    attributes:
+      label: Confirmation
+      description: Please confirm the following
+      options:
+        - label: I have verified there is no schedule conflict with existing activities
+          required: false
+        - label: All necessary approvals have been obtained
+          required: true
+        - label: Activity details are accurate and complete
+          required: true
